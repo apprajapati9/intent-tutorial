@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ajay.maplocation.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Implicit Intent"
+        android:id="@+id/title1"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/textView1"
+        android:layout_below="@+id/title1"
+        android:layout_height="wrap_content"
+        android:text="1. This is example of implicit Intent, where you can pass specific information and want it to be handled with specific application inside your device."
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:id="@+id/location"
+        android:hint="Enter your address"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapButton"
+        android:text="Open Map via Implicit Intent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/location"/>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView2"
+        android:layout_below="@+id/mapButton"
+        android:layout_marginTop="5dp"
+        android:text="2. This is example of implicit Intent where you let the USER to decide which application you want to handle this data you just passed. In this case, I am just passing a simple text. Basically both are same. This approach only used to handle MIME TEXTS.
+        to know all types follow http://www.freeformatter.com/mime-types-list.html"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapButton2"
+        android:text="Open Map via Implicit Intent2"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/TextView2"
+        android:onClick="implicitSendText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explicit Intent"
+        android:layout_below="@id/mapButton2"
+        android:id="@+id/title2"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleIntro"
+        android:layout_below="@id/title2"
+        android:text="Explicit intent are for in app navigation. For example, open another activity of your app. from ActivityA to ActivityB. "/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleIntro"
+        android:id="@+id/explictButton"
+        android:text="Explict Intent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_centerInParent="true"
+        android:onClick="explictButton"/>
+
+
+</RelativeLayout>
